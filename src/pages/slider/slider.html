@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{item.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <img src="assets/signs/{{slide.id}}.png" class="slide-image"/>
+      <h2 class="slide-title">{{slide.name}} ({{slide.id}})</h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
